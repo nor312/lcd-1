@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int user_list [10];
+#define MAX_LIST 10
+int user_list[MAX_LIST];
 
 //sifts for the lowest (greatest fraction) number
 int filter (int lowerMass) {
