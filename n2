@@ -1,0 +1,100 @@
+#include <iostream>
+
+using namespace std;
+
+int i;
+int lowerMass=0;
+int x=0;
+int user_list[x];
+int hyp = 0;
+int temp; //lowest array value
+int adj; //second lowest array value, used to find mult from temp
+int mult; //the factor between the temp and the adj, used to factor up all array values
+
+//I found that to initilize functions they must not be spaced over at all. But if I want to use functions
+//then they cannot be within main, so they have to be outside of it, but that means that my variables
+//have to be global, so I initialize them outside of the functions, but for some reason the array can't intitialize
+//Any ideas???
+
+int LCD()
+{
+
+    for (i=0; i<x-1; i++){
+        if (max(user_list[i],user_list[i+1])% min(user_list[i],user_list[i+1])==0){
+            lowerMass=max(user_list[i],user_list[i+1]);
+            cout<<lowerMass<<endl;
+        }
+        else{
+            filter(lowerMass);
+        }
+    }
+    }
+int filter (){ //sifts for the lowest (greatest fraction) number
+
+
+        for (i=0; i<x; i++){
+            if (user_list[i]>r && user_list[i]>temp){
+                temp=user_list[i];
+            }
+            else{
+                temp=r;
+                cout<<"temporary is ">>temp<<endl;
+            }
+
+        }
+
+        for (i=0; i<x; i++){
+            if (user_list[i]>temp && user_list[i]<adj){
+                adj=user_list[i];
+                cout<<"Adj is "<<adj<<endl;
+            }
+        }
+}
+
+int main()
+{
+    //intro
+    cout<<"How many numbers would you like to test?"<<endl;
+    int x;
+    cin>>x;
+    cout<<"I understand that you would like to test "<<x<< " numbers."<<endl;
+    if (x<=1){
+        cout<<"That makes no sense, you dummy. :P"<<endl;
+    }
+
+    //user input system
+
+
+    for (i=x; i>0; i--){
+        cout<<"What denominator would you like to add to the list to test?"<<endl;
+        cin>>user_list[(x-i)];
+        cout<<"I understand that you would like to add "<<user_list[(x-i)]<<" to the list."<<endl;
+    }
+
+    //Prints back numbers that have been input
+    for (i=0; i<x; i++){
+        cout<<"Your list is: "<<user_list[i]<<", ";
+    }
+    cout<<""<<endl;
+
+    //algorithm to test
+     //modulo factor
+
+
+
+
+
+
+    //upkick
+
+    //function that multiplies up
+    //downkick
+
+
+    //print results, because apparently printing out an array is more than one line of code long!??!?!?
+
+
+
+
+}
+
